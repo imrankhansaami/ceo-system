@@ -52,7 +52,11 @@ body::before {
   pointer-events: none;
   background-image: var(--pattern);
   background-size: 80px 80px;
-  opacity: 0.05;
+  opacity: 0.06;
+}
+
+@media (prefers-color-scheme: dark) {
+  body::before { opacity: 0.09; }
 }
 
 button, input { font: inherit; color: inherit; }
