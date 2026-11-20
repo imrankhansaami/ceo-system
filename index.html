@@ -4,12 +4,31 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>CEO System</title>
-<meta name="description" content="A minimal, local-first CEO system: the goals that matter, and how far along each one is.">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%230d7a6b'/><path d='M9 21l5-6 4 4 5-8' stroke='white' stroke-width='2.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>">
+<meta name="description" content="A minimal, local-first CEO system: the goals that matter, and how far along each one is. Opened with the isti'adhah and the basmalah.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%230f6b52'/><path d='M16 6.5 19 12l6.5 1-5 4.7 1.2 6.4L16 21.2l-5.7 2.9L11.5 17.7l-5-4.7L13 12z' fill='%23d9b45a'/></svg>">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <main class="app">
+
+  <section class="opening" aria-label="Opening">
+    <p class="arabic" lang="ar" dir="rtl">أَعُوذُ بِاللَّهِ مِنَ الشَّيْطَانِ الرَّجِيمِ</p>
+    <p class="roman">Auzubillah Minashaitan Nirajeem</p>
+    <p class="meaning">I seek refuge in Allah from the outcast Shaitan (Satan).</p>
+
+    <div class="ornament" aria-hidden="true">
+      <span class="ornament-line"></span>
+      <svg viewBox="0 0 24 24" focusable="false"><path d="M22 12 L18.53 14.71 L19.07 19.07 L14.71 18.53 L12 22 L9.29 18.53 L4.93 19.07 L5.47 14.71 L2 12 L5.47 9.29 L4.93 4.93 L9.29 5.47 L12 2 L14.71 5.47 L19.07 4.93 L18.53 9.29 Z"/></svg>
+      <span class="ornament-line"></span>
+    </div>
+
+    <p class="arabic arabic-lg" lang="ar" dir="rtl">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ</p>
+    <p class="roman">Bismillahir Rahmanir Rahim</p>
+    <p class="meaning">In the name of Allah, the Most Gracious, the Most Merciful.</p>
+  </section>
 
   <header class="head">
     <div class="head-top">
@@ -44,6 +63,16 @@
   <footer class="foot">
     <span id="count"></span>
     <button class="link danger" id="reset" type="button">Clear all</button>
+  </footer>
+
+  <footer class="close" aria-label="Closing">
+    <div class="ornament" aria-hidden="true">
+      <span class="ornament-line"></span>
+      <svg viewBox="0 0 24 24" focusable="false"><path d="M22 12 L18.53 14.71 L19.07 19.07 L14.71 18.53 L12 22 L9.29 18.53 L4.93 19.07 L5.47 14.71 L2 12 L5.47 9.29 L4.93 4.93 L9.29 5.47 L12 2 L14.71 5.47 L19.07 4.93 L18.53 9.29 Z"/></svg>
+      <span class="ornament-line"></span>
+    </div>
+    <p class="arabic" lang="ar" dir="rtl">الْحَمْدُ لِلَّهِ</p>
+    <p class="meaning">Alhamdulillah &mdash; all praise is due to Allah.</p>
   </footer>
 
 </main>

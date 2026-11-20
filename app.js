@@ -1,6 +1,7 @@
 /*
  * CEO System — a minimal, local-first goals tracker.
- * No build step, no dependencies, no network. Your data stays in this browser.
+ * No build step and no JavaScript dependencies. Your data stays in this browser.
+ * Opened with the isti'adhah and the basmalah; closed with alhamdulillah.
  */
 (function () {
   'use strict';
@@ -132,9 +133,17 @@
     var avg = total ? Math.round(sum / total) : 0;
 
     el.overall.style.width = avg + '%';
-    el.summary.textContent = total
-      ? active + ' active of ' + total + ' \u00b7 ' + avg + '% average progress'
-      : 'No goals yet.';
+
+    if (total && active === 0) {
+      el.summary.textContent =
+        'Masha\u2019Allah \u2014 ' + (total === 1 ? 'the goal is' : 'all goals are') + ' complete.';
+      el.summary.classList.add('is-complete');
+    } else {
+      el.summary.textContent = total
+        ? active + ' active of ' + total + ' \u00b7 ' + avg + '% average progress'
+        : 'No goals yet.';
+      el.summary.classList.remove('is-complete');
+    }
     el.count.textContent = total
       ? total + (total === 1 ? ' goal' : ' goals')
       : '';
