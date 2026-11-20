@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CEO System</title>
+<meta name="description" content="A minimal, local-first CEO system: the goals that matter, and how far along each one is.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%230d7a6b'/><path d='M9 21l5-6 4 4 5-8' stroke='white' stroke-width='2.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<main class="app">
+
+  <header class="head">
+    <div class="head-top">
+      <h1>CEO System</h1>
+      <span class="stamp" id="stamp"></span>
+    </div>
+    <div class="overall" role="img" aria-label="Average progress across all goals">
+      <div class="overall-fill" id="overall-fill"></div>
+    </div>
+    <p class="sub" id="summary">No goals yet.</p>
+  </header>
+
+  <form class="add" id="add-form" autocomplete="off">
+    <input class="field" id="new-title" type="text" placeholder="Add a goal&hellip;" aria-label="Goal" maxlength="200" required>
+    <input class="field field-date" id="new-due" type="date" aria-label="Target date">
+    <button class="btn" type="submit">Add</button>
+  </form>
+
+  <nav class="filters" id="filters" aria-label="Filter goals">
+    <button class="chip is-on" type="button" data-filter="all">All</button>
+    <button class="chip" type="button" data-filter="active">Active</button>
+    <button class="chip" type="button" data-filter="done">Done</button>
+    <span class="grow"></span>
+    <button class="link" id="export" type="button">Export</button>
+    <button class="link" id="import" type="button">Import</button>
+    <input id="import-file" type="file" accept="application/json,.json" hidden>
+  </nav>
+
+  <ul class="goals" id="goals"></ul>
+  <p class="empty" id="empty">No goals yet &mdash; add your first one above.</p>
+
+  <footer class="foot">
+    <span id="count"></span>
+    <button class="link danger" id="reset" type="button">Clear all</button>
+  </footer>
+
+</main>
+<script src="app.js" defer></script>
+</body>
+</html>
